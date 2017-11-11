@@ -1,4 +1,4 @@
-FROM golang:1.9-alpine3.6
+FROM google/golang
 RUN CGO_ENABLED=0 go get -a -ldflags '-s' github.com/kiranpachhai/hello_go
-RUN cp /go/src/github.com/kiranpachhai/hello_go/Dockerfile /go
-CMD docker build -t kiranpachhai/hello_go go
+RUN cp /gopath/src/github.com/kiranpachhai/hello_go/Dockerfile /gopath
+CMD docker build -t kiranpachhai/hello_go gopath
